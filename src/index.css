@@ -1,0 +1,600 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+a{
+  text-decoration: none;
+  color: #101010 
+}
+
+a:hover{
+  cursor: pointer;
+}
+
+header{
+  background-color: #151926;
+  display: flex;
+  padding: 0.85rem 0.5rem;
+  align-items: center;
+  color: #ffff;
+  font-weight: bold;
+  box-shadow: 0px 4px 100px 0px rgba(15, 0, 56, 0.25);
+
+}
+
+header img{
+  margin-right: 1rem;
+  transition: .5s;
+}
+
+header img:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.menu a{
+  background-color: #151926;
+  color: #ffffff;
+  transition: .5s;
+  padding: 1.2rem 2rem
+}
+
+.menu a:hover{
+  background-color: #565d74;
+  cursor: pointer;
+}
+
+.atual{
+  position: relative;
+}
+.atual::after{
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  border-radius: 10px;
+  bottom: 2px;
+  left: 20%;
+  background-color: #F6413D;
+  
+}
+
+main{
+  margin: 0 10%;
+}
+
+.filtros{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  align-items: end;
+  position: relative;
+}
+
+.filtros::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -30px;
+  background-color: #c8c8c8;
+  
+}
+
+.filtros :first-child{
+  grid-column: span 2; 
+}
+
+.filtro{
+  margin: 0 0.6rem;
+  font-size: 10px;
+}
+
+.filtro select:hover, .filtro input:hover, .ordem select:hover{
+  cursor: pointer;
+}
+
+.filtro select, .filtro input{
+  margin-top: 5px;
+  border-radius: 10px;
+  padding: 0.7rem;
+  border-color: rgb(174, 174, 174);
+  border-style: solid;
+  border-width: 1.5px;
+}
+
+.cidade_select {
+  width: 100%;
+}
+
+.N_hospedes{
+  display: flex;
+  border: 1px solid; 
+  margin-top: 5px;
+  border-radius: 10px;
+  padding: 0.55rem;
+  border-color: rgb(174, 174, 174);
+  border-style: solid;
+  border-width: 1.5px;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+
+}
+
+.maismenos{
+  background-color: #ffffff;
+  border-color: rgb(174, 174, 174);
+  border-style: solid;
+  border-width: 2px;
+  padding: 0px 5px;
+  border-radius: 50%;
+  color: rgb(174, 174, 174);
+  font-weight: 900;
+  transition: .2s;
+}
+
+.maismenos:hover{
+  cursor: pointer;
+  border-color: #151926;
+  color: #151926;
+  transform: scale(1.1);
+}
+
+.menos{
+  padding: 0 8px;
+}
+
+.buscar{
+  background-color: #F6413D;
+  border: none;
+  border-radius: 10px;
+  height: 2.7rem;
+  width: 70%;
+  color: #ffffff;
+  font-size: 18px;
+  transition: .2s;
+  margin-left: 1rem;
+
+}
+
+.buscar:hover{
+  cursor: pointer;
+  background-color: #ffffff;
+  border:#F6413D 2px solid;
+  color: #F6413D;
+}
+
+.maisFiltros{
+  font-size: 18px;
+  font-weight: bold;
+  color:#F6413D;
+  margin-bottom: 10px;
+}
+
+.maisFiltros:hover{
+  cursor: pointer;
+}
+
+.principal{
+  margin-top: 50px;
+}
+
+.header_principal{
+  display: flex;
+  width: 100%;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.textos_main h1{
+  font-size: 22px;
+}
+
+.textos_main h5{
+  margin-top: 10px;
+  margin-left: 2px;
+  font-weight: normal;
+  color: #474747;
+}
+
+.ordenar{
+  width: 7rem;
+  border-radius: 10px;
+  padding: 0.5rem 0.2rem;
+  border-color: rgb(174, 174, 174);
+  border-style: solid;
+  border-width: 1.5px;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.card{
+  transition: .5s;
+}
+
+.card:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.img{
+  position: relative;
+}
+
+.img_predio{
+  height: 7rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.airbnb{
+  height: 1.3rem;
+  width: 1.3rem;
+  position: absolute;
+  left: 10px;
+  bottom: 15px;
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 50%;
+
+}
+
+.seazone{
+  height: 1.6rem;
+  width: 1.6rem;
+  position: absolute;
+  left: 50px;
+  bottom: 15px;
+  background-color: #ffffff;
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.info1{
+  margin-top: 0.8rem;
+  position: relative;
+}
+
+.options{
+  position: absolute;
+  width: 4px;
+  right: 5px;
+  top: 5px
+}
+
+.info1 h1{
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.info1 h4{
+  font-weight: normal;
+  margin-top: 7px;
+  font-size: 14px;
+}
+
+.info2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+
+.info_preco2{
+  display: grid;
+  justify-items: end;
+}
+
+.info2 h3{
+  font-weight: normal;
+  font-size: 14px;
+  margin-top: 13px;
+  position: relative;
+}
+
+
+.info_preco1 h3::after{
+  content: "";
+  position: absolute;
+  width: 180%;
+  height: 0.5px;
+  left: 0;
+  bottom: -7px;
+  background-color: #d6d6d6;
+  
+}
+
+.info_preco2 h3::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.5px;
+  left: 0;
+  bottom: -7px;
+  background-color: #d6d6d6;
+  
+}
+
+.info2 h2{
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 13px;
+}
+
+.total{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: end;
+  
+}
+
+.total h2{
+  font-weight: 100;
+}
+
+.cinza{
+  position: relative;
+}
+
+.cinza::after{
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  right: -15%;
+  bottom: 0px;
+  background-color: #212121;
+  
+}
+
+.verde{
+  color: #00AE69;
+  font-weight: 900;
+}
+
+.total h4{
+  color:#00AE69;
+  font-weight: 100;
+}
+
+footer{
+  background-color: #151926;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  margin-top: 5rem;
+  padding: 3rem 0;
+}
+
+
+
+
+
+
+
+.principal2{
+  margin-top: 50px;
+}
+
+.header_principal2 h4{
+ font-weight: normal;
+ font-size: 14px;
+ margin-bottom: 2rem;
+}
+
+.info{
+  display: grid;
+  grid-template-columns:repeat(8, 1fr);
+  
+}
+
+.foto{
+  grid-column: span 3; 
+}
+
+.foto img{
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.foto h2{
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+.foto h4{
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.foto a{
+  color:#F6413D;
+  text-decoration:underline;
+  font-size: 14px;
+}
+
+
+
+.textos{
+  margin-left: 5rem;
+  grid-column: span 5; 
+}
+
+.info3 h4 {
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 0.5rem;
+}
+
+.grid1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 0.5rem;
+  margin-bottom: 5px;
+  position: relative;
+  
+}
+
+.grid1::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -5px;
+  background-color: #c8c8c8;
+}
+
+.grid1 h3{
+  font-size: 14px;
+}
+
+
+.grid1 div{
+  display: flex;
+  justify-content: flex-end;
+  color:#00AE69;
+}
+
+.circulo{
+  margin-right: 5px;
+}
+
+.caracteristica{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0
+}
+
+.box{
+  border: #c8c8c8 1px solid;
+  border-radius: 10px;
+  padding: 1.3rem 1.5rem;
+  color: #4a4a4a;
+}
+
+.box h3{
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.box div{
+  display: grid;
+  display: flex;
+  gap: 0.8rem
+}
+
+.camas{
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.camas::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -10px;
+  left: 0;
+  background-color: #c8c8c8;
+}
+
+.info4{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
+  column-gap: 2rem;
+}
+
+.info4 h2{
+  grid-column: span 2; 
+  position: relative;
+  margin-bottom: 10px;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.info4 h2::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -10px;
+  left: 0;
+  background-color: #c8c8c8;
+}
+
+.cama{
+  display: flex;
+  gap: 5px;
+  font-size: 1.2rem;
+  color: #4a4a4a;
+}
+
+.cama li{
+  font-weight: bold;
+  color:#101010
+}
+
+.caracteristica2{
+  margin-top: 1.5rem;
+  
+}
+
+.caracteristica2 div{
+  display: flex;
+  align-items: center;
+  color: #4a4a4a;
+}
+
+.caracteristica2 p{
+  font-size: 14px;
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+  
+}
+
+.nao, .sim{
+  color:#ffffff;
+  padding: 3px 6px;
+  border-radius: 5px;
+}
+
+.nao{
+  background-color: #F6413D;
+}
+
+.sim{
+  background-color: #00AE69;
+}
+
+.regras{
+  font-size: 14px;
+  align-items: center;
+}
+
+.regras a{
+  color: #F6413D;
+  margin-left: 0.5rem;
+}
+
+
+
+
+
+
