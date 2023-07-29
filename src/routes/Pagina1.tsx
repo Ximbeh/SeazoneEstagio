@@ -1,5 +1,4 @@
 
-import { useState } from 'react'
 
 //importação de componentes
 import Card from '../components/Card'
@@ -13,7 +12,6 @@ import {Link} from "react-router-dom"
 
 
 function Pagina1() {
-  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -40,17 +38,16 @@ function Pagina1() {
             {/* Linkei o card a um ID, para ser clicavel e redirecionado a uma nova pagina com o consequente ID*/}
             {content.map(content => (
               <Link to={`/Produto/${content.id}`}  key={content.id}>
-                  <Card 
-                    foto={content.foto}
-                    nome={content.nome}
-                    info={content.info}
-                    valorDiaria={content.valorDiaria}
-                    cincoDiarias={content.cincoDiarias}
-                    limpeza={content.limpeza}
-                    caucao={content.caucao}
-                    total={content.total}
-                    aVista={content.aVista}
-                  />
+                  <Card
+                  foto={content.foto}
+                  nome={content.nome}
+                  info={content.info}
+                  valorDiaria={content.valorDiaria}
+                  cincoDiarias={content.cincoDiarias}
+                  limpeza={content.limpeza}
+                  caucao={content.caucao}
+                  total={content.total}
+                  aVista={content.aVista} id={undefined}                  />
               </Link>
             ))}
           </section>

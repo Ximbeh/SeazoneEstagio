@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal} from 'react'
 
 //importação das imagens
 import airbnb from '../assets/img/air.png';
@@ -6,8 +6,7 @@ import icone from '../assets/img/icone.png';
 import vector from '../assets/img/vector.png';
 
 //utilização do props para mudança de conteudo conforme ID
-function Card(props) {
-    const [count, setCount] = useState(0)
+function Card(props: { id: Key | null | undefined; foto: string | undefined; nome: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; info: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; valorDiaria: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; cincoDiarias: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; limpeza: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; caucao: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; total: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; aVista: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }) {
   
     return (
       <>

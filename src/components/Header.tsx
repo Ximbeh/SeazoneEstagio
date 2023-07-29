@@ -1,9 +1,8 @@
-import { useState } from 'react'
+
 import logo from '../assets/img/logo.png';
 import {Link} from "react-router-dom"
 
 function Header() {
-    const [count, setCount] = useState(0)
 
   return (
     <>

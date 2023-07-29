@@ -1,5 +1,4 @@
 //Importação do DOM
-import { useState } from 'react'
 import { useParams } from "react-router-dom";
 
 //Importação dos componentes
@@ -16,11 +15,11 @@ import donate from '../assets/img/Donate.svg'
 import flecha from '../assets/img/Flecha7.svg'
 
 function Produto() {
-    const [count, setCount] = useState(0);
+
     const { id } = useParams();
 
     {/*Aplicação dos conteudos com seus conformes ID's*/}
-    const selectedContent = content.find(content => content.id === parseInt(id, 10));
+    const selectedContent = content.find(content => content.id === parseInt(id!, 10));
     if (!selectedContent) {
         return <div>No content found for the provided id.</div>;
     }
